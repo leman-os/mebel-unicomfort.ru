@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчёт стоимости кухни на заказ</title>
+    
+        <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/slick.css" rel="stylesheet">
+    <link href="../css/slick-theme.css" rel="stylesheet">
+    <link href="../css/modal.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+    <link href="../css/smoothproducts.css" rel="stylesheet">
+    <script src="../js/tab.js"></script>
+
+    <!--[if lt IE 9]> <script src="js/html5.js"></script> <![endif]-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body class="body-single">
+<!--<a href="../index.html"><img class="svg logo" src="images/logo.svg" /></a>-->
+
+
+
+
+<div class="wrapper">
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <img src="../images/toogle.png" class="toggle" />
+                <ul class="floatList header__top-menu">
+                    <li><a href="../index.html">О компании</a></li>
+                                        <li><a href="../index.html">Мебель в кредит</a></li>
+                                        <li><a href="../index.html">Контактные данные</a></li>
+                </ul>
+                                <div class="clearFloat"></div>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="container">
+                <div class="header__logo">
+                    <a href="../index.html"><img class="svg" src="../images/logo.svg" alt="logo" /></a>
+                    <span>Производим мебель с 1998</span>
+                </div>
+                <div class="mob-ico">
+                    <div class="cons-designer">
+                        <span><img class="svg" src="../images/cons.svg" /></span>
+                        <a href="../index.html" class="atx"  data-toggle="modal" data-target="#myModal2">
+                            <i>Запросить консультацию</i>
+                            <i>дизайнера</i>
+                        </a>
+                    </div>
+                    <div class="order-btn">
+                        <span><img class="svg" src="../images/orde.svg" /></span>
+                        <a href="../index.html" class="atx" data-toggle="modal" data-target="#myModal3">
+                            <i>Заявка на</i>
+                            <i>замер</i>
+                        </a>
+                    </div>
+                    <div class="calc-btn">
+                        <span><img class="svg" src="../images/calc.svg" /></span>
+                        <a href="index.html" class="atx">
+                            <i>Расчет</i>
+                            <i>стоимости</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__call">
+                    <p class="header_top-call">
+                        <img class="svg" src="../images/mobile.svg" />
+                        <span>
+                            375-18-83
+                        </span>
+                    </p>
+                    <a class="def-btn" href="../index.html" data-toggle="modal" data-target="#myModal">Связаться с нами</a>
+                </div>
+                <div class="clearFloat"></div>
+            </div>
+        </div>
+
+                        <div class="catalog">
+            <div class="container">
+                <p class="cattog">Каталог</p>
+                <ul>
+                    <li>
+                        <img class="svg" src="../images/nav_1.svg" />
+                        <a href="../kuhni/index.html">Кухни на заказ</a>
+                    </li>
+                    <li>
+                        <img class="svg" src="../images/nav_2.svg" />
+                        <a href="../shkafi/index.html">Шкафы купе</a>
+                    </li>
+                    <li>
+                        <img class="svg" src="../images/nav_3.svg" />
+                        <a href="../detskaia/index.html">Детская мебель</a>
+                    </li>
+                    <li>
+                        <img class="svg" src="../images/nav_4.svg" />
+                        <a href="../prihojie/index.html">Прихожие</a>
+                    </li>
+                    <li>
+                        <img class="svg kravat" src="../images/nav_5.svg" />
+                        <a href="../krovati/index.html">Кровати</a>
+                    </li>
+                    <li>
+                        <img class="svg" src="../images/nav_6.svg" />
+                        <a href="../ofisnaia/index.html">Офисная</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </header>
+
+        
+
+        <div class="container fsection1">
+            <h1 class="pageTitle">Расчёт стоимости Кухни</h1>
+            
+
+            <div style="padding-bottom:30px;"><p>
+                В данном разделе вы можете отправить заявку на <b>предварительный расчёт стоимости</b> мебели.<br/>
+                Точная стоимость вашей будущей мебели будет определена <b>только после</b> выезда замерщика и составления эскиза проекта.
+            </p>
+            </div>
+            <img src="../images/shema.png" class="shema2" />
+            <div class="form-section">
+                <form action="" method="POST" >
+                    <ul>
+                        <li>
+                            <span>Тип кухни</span>
+                            <div>
+                                <img src="../images/arrow.svg" class="svg" />
+                                <select id="form_type" name="form[type]">
+        <option value="1">Прямая</option><option value="2">Угловая</option><option value="3">П-образная</option></select>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Общая длинна, мм <b>*</b></span>
+                            <div>
+                                <input type="number" id="form_dlina" name="form[dlina]" required="required" />
+                            </div>
+                        </li>
+                        <li>
+                            <span>Глубина нижнего уровня, мм&nbsp;<b>*</b></span>
+                            <div>
+                                <input type="number" id="form_glubina_nijnego" name="form[glubina_nijnego]" required="required" />
+                            </div>
+                        </li>
+                        <li>
+                            <span>Высота верхнего уровня, мм&nbsp;<b>*</b></span>
+                            <div>
+                                <input type="number" id="form_visota_verhnego" name="form[visota_verhnego]" required="required" />
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="form2list">
+                        <li>
+                            <span>Материал столешницы</span>
+                            <div>
+                                <img src="../images/arrow.svg" class="svg" />
+                                <select id="form_material_stoleshnici" name="form[material_stoleshnici]">
+        <option value="1">Пластик</option><option value="2">Искусственный камень</option><option value="3">Натуральный камень</option><option value="4">Стекло</option></select>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Материал фасадов</span>
+                            <div>
+                                <img src="../images/arrow.svg" class="svg" />
+                                <select id="form_material_fasadov" name="form[material_fasadov]">
+        <option value="1">ЛДСП</option><option value="2">МДФ-эмаль (матовые)</option><option value="3">МДФ-эмаль (глянец)</option><option value="4">МДФ-эмаль (металлик)</option><option value="5">МДФ-эмаль (спецэффект)</option><option value="6">Пластик</option><option value="7">Акриловый пластик</option><option value="8">Шпон</option><option value="9">Массив</option><option value="10">Рамочный</option><option value="11">МДФ-плёнка (матовые)</option><option value="12">МДФ-плёнка (глянец)</option><option value="13">МДФ-плёнка (металлик)</option><option value="14">МДФ-плёнка (спецэффект)</option></select>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Кол-во гнутых / вогнутых фасадов, шт</span>
+                            <div>
+                                <input type="number" id="form_gnutih_fasadov" name="form[gnutih_fasadov]" />
+                            </div>
+                        </li>
+
+                        <li>
+                            <span>Кол-во витражей, шт</span>
+                            <div>
+                               <input type="number" id="form_vitrajei" name="form[vitrajei]" />
+                            </div>
+                        </li>
+                        <li>
+                            <span>Фурнитура и наполнение</span>
+                            <div>
+                                <img src="../images/arrow.svg" class="svg" />
+                                <select id="form_furnitura" name="form[furnitura]">
+        <option value="1">Эконом</option><option value="2">Стандарт</option><option value="3">Люкс</option></select>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Кол-во выдвижных ящиков&nbsp;<b>*</b></span>
+                            <div>
+                                <input type="number" id="form_jashikov" name="form[jashikov]" required="required" />
+                            </div>
+                        </li>
+                    </ul>
+
+            </div>
+            <img src="../images/shema.png" class="shema" />
+            <div class="clearFloat"></div>
+        </div>
+        <div class="container fsection1">
+            <h2 class="pageTitle">Конструктивные елементы кухни</h2>
+            <div class="form-section2">
+                    <ul>
+                        <li class="question">
+
+                            <div class="licol">
+                                                                <div class="radios">
+                                    <div class="check">
+                                        <input type="checkbox" id="form_ugolok" name="form[ugolok]" value="1" />
+                                        <label for="form_ugolok"></label>
+                                        <label class="c-title">Волшебный уголок</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="licol plast">
+                                <div class="radios">
+                                    <div class="check">
+                                        <input type="checkbox" id="form_panel" name="form[panel]" value="1" />
+                                        <label for="form_panel"></label>
+                                        <label class="c-title">Стеновая панель</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearFloat"></div>
+                        </li>
+                        <li>
+                            <span class="checkt">Всраиваемая техника (в стоимость не входит):</span>
+                            <div class="check-box">
+                                <div class="check-col">
+                                    <div class="check">
+                                        <input type="checkbox" id="form_holodilnik" name="form[holodilnik]" value="1" />
+                                        <label for="form_holodilnik"></label>
+                                        <label class="c-title">Холодильник</label>
+                                    </div>
+                                    <div class="check">
+                                        <input type="checkbox" id="form_elektroplita" name="form[elektroplita]" value="1" />
+                                        <label for="form_elektroplita"></label>
+                                        <label class="c-title">Электроплита</label>
+                                    </div>
+                                    <div class="check">
+                                        <input type="checkbox" id="form_mikrovolnovaya" name="form[mikrovolnovaya]" value="1" />
+                                        <label for="form_mikrovolnovaya"></label>
+                                        <label class="c-title" for="c6">Микроволновая печь</label>
+                                    </div>
+
+                                </div>
+                                <div class="check-col checkcol2">
+                                    <div class="check">
+                                        <input type="checkbox" id="form_posudomoika" name="form[posudomoika]" value="1" />
+                                        <label for="form_posudomoika"></label>
+                                        <label class="c-title" for="c7">Посудомоечная машина</label>
+                                    </div>
+                                    <div class="check">
+                                        <input type="checkbox" id="form_stiralka" name="form[stiralka]" value="1" />
+                                        <label for="form_stiralka"></label>
+                                        <label class="c-title" for="c8">Стиральная машина</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="radios">
+                                    <div class="check">
+                                        <input type="checkbox" id="form_podsvetka" name="form[podsvetka]" value="1" />
+                                        <label for="form_podsvetka"></label>
+                                        <label class="c-title">Подсветка</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+            </div>
+            <div class="clearFloat"></div>
+        </div>
+        <div class="container">
+            <div class="order-form">
+                    <div class="order-item">
+                        <span>Фамилия</span>
+                        <input type="text" id="form_familiya" name="form[familiya]" />
+                    </div>
+                    <div class="order-item">
+                        <span>Имя&nbsp;<b>*</b></span>
+                        <input type="text" id="form_imya" name="form[imya]" required="required" />
+                    </div>
+                    <div class="order-item">
+                        <span>Отчество</span>
+                        <input type="text" id="form_otchestbvo" name="form[otchestbvo]" />
+                    </div>
+                    <div class="order-item">
+                        <span>Контактный телефон&nbsp;<b>*</b></span>
+                        <input type="text" id="form_telefon" name="form[telefon]" required="required" />
+                    </div>
+                    <div class="order-item">
+                        <span>E-mail&nbsp;<b>*</b></span>
+                        <input type="email" id="form_email" name="form[email]" required="required" />
+                    </div>
+                    <div class="order-item">
+                        <span>Коментарий</span>
+                        <textarea id="form_comment" name="form[comment]"></textarea>
+                    </div>
+                    <div class="order-item" style="padding-left:30%;">
+                        <span></span>
+                        <div class="g-recaptcha" data-sitekey="6LdXnlAUAAAAAC47hPHb4hp83F5_n8-BmdDgCn5C"></div>
+                    </div>
+                        <input type="hidden" id="form__token" name="form[_token]" value="ViP2JvInJtKkeu_xJaKL4C7ik8jS6r2DxT1iZ38C6ck" />
+
+                    <button class="def-btn">Отправить</button>
+
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info">
+                <em class="fcall">(383) <b>375-18-83</b></em>
+                <span>г. <b>Новосибирск</b><br/>ул. Немировича Данченко, д.122 <br/>офис 246</span>
+                <a href="../index.html" class="link-hover">54mebel@mail.ru</a>
+            </div>
+            <div class="fmenu">
+                <span>Продукция</span>
+                <ul>
+                    <li><a href="../kuhni/index.html">Кухни</a></li>
+                    <li><a href="../shkafi/index.html">Шкафы</a></li>
+                    <li><a href="../detskaia/index.html">Детская</a></li>
+                    <li><a href="../prihojie/index.html">Прихожие</a></li>
+                    <li><a href="../ofisnaia/index.html">Офисная</a></li>
+                    <li><a href="../krovati/index.html">Кровати</a></li>
+
+                </ul>
+            </div>
+            <div class="fmenu">
+                <span>Покупателям</span>
+                <ul>
+                    <li><a href="index.html">Расчёт стоимости</a></li>
+                    <li><a href="../index.html">Кредит на мебель</a></li>
+                    <li><a href="../tips/index.html">Статьи и советы</a></li>
+                </ul>
+            </div>
+            <div class="fmenu">
+                <span>О фабрике</span>
+                <ul>
+                    <li><a href="../index.html">О компании</a></li>
+                    <li><a href="../index.html">Конаткты</a></li>
+                    <li><a href="../otzivi/index.html">Отзывы</a></li>
+                    <li><a href="../vacancy/index.html">Вакансии</a></li>
+                </ul>
+            </div>
+                        <div class="clearFloat"></div>
+        </div>
+    </footer>
+</div>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Обратный звонок -->
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="modal-title">Связаться с нами</h4>
+                <p>Оставьте свои данные и мы свяжемся с вами</p>
+                <form action="/callback?type=zvonok" method="post" >
+                    <div class="order-form">
+                        <form>
+                            <div class="order-item">
+                                <span>Имя</span>
+                                <input type="text" name="name" required placeholder="Имя">
+                            </div>
+                            <div class="order-item">
+                                <span>Телефон</span>
+                                <input type="text" name="phone" required placeholder="Телефон">
+                            </div>
+                            <div class="order-item">
+                                <span>Коментарий</span>
+                                <textarea name="comment" placeholder="Комментарий"></textarea>
+                            </div>
+                            <button class="def-btn">Отправить</button>
+                            <div class="clearFloat"></div>
+                        </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal2" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Заявка на консультацию -->
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="modal-title">Заявка на консультацию</h4>
+                                <form action="/callback?type=consult" method="post" >
+                    <div class="order-form">
+                        <form>
+                            <div class="order-item">
+                                <span>Имя</span>
+                                <input type="text" name="name" required placeholder="Имя">
+                            </div>
+                            <div class="order-item">
+                                <span>Телефон</span>
+                                <input type="text" name="phone" required placeholder="Телефон">
+                            </div>
+                            <div class="order-item">
+                                <span>E-mail</span>
+                                <input type="text" name="email" placeholder="E-mail">
+                            </div>
+                            <div class="order-item">
+                                <span>Вопрос / Коментарий</span>
+                                <textarea name="comment" placeholder="Ваш вопрос к дизайнеру"></textarea>
+                            </div>
+                            <button class="def-btn">Отправить</button>
+                            <div class="clearFloat"></div>
+                        </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal3" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="modal-title">Заявка на замер</h4>
+                                <form action="/callback?type=zamer" method="post" >
+                    <div class="order-form">
+                        <form>
+                            <div class="order-item">
+                                <span>Имя</span>
+                                <input type="text" name="name" required placeholder="Имя">
+                            </div>
+                            <div class="order-item">
+                                <span>Телефон</span>
+                                <input type="text" name="phone" required placeholder="Телефон">
+                            </div>
+                            <div class="order-item">
+                                <span>Коментарий</span>
+                                <textarea name="comment" placeholder="Что необхоимо замерить?"></textarea>
+                            </div>
+                            <button class="def-btn">Отправить</button>
+                            <div class="clearFloat"></div>
+                        </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/slick.min.js"></script>
+<script src="../js/modal.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="../js/svg.js"></script>
+<script src="../js/tab.js"></script>
+
+<script src="../js/scripts.js"></script>
+
+
+
+<script>
+    $(document).ready(function(){
+        $('.slider-home').bxSlider({
+            //auto: true,
+            pagerCustom: '.bx-pager'
+
+        });
+    });
+</script>
+
+
+</body>
+</html>
