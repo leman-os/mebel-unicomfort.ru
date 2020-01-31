@@ -182,8 +182,31 @@ a:active{
 }
 .header__logo{
     float: left;
-    width: 170px;
+    width: auto;
     margin-right: 138px;
+}
+.header__logo a {
+    display: inline;
+    
+}
+.header__logo img {
+    width: 100px;
+    height: 100px;
+    display: inline;
+    
+}
+.header__logo h2 {
+    margin-left: 30px;
+    display: inline;
+    font-family: Panton-Caps;
+    font-size: 34px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
 }
 .header__logo span{
     font-size: 12px;
